@@ -1,0 +1,19 @@
+{
+    "name": "kintone-plugin-uploader",
+    "version": "1.0.0",
+    "description": "A tool to upload and update Kintone plugin file.",
+    "main": "plugin-uploader.js",
+    "scripts": {
+      "start": "node plugin-uploader.js"
+    },
+    "author": "rex0220",
+    "license": "MIT",
+    "dependencies": {
+      "axios": "^0.21.1",
+      "dotenv": "^8.2.0",
+      "form-data": "^3.0.0",
+      "kleur": "^4.1.4",
+      "yargs": "^16.2.0"
+    }
+  }
+  
