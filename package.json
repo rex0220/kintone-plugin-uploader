@@ -1,6 +1,6 @@
 {
-    "name": "@rex0220/kintone-plugin-uploader",
-    "version": "1.0.2",
+    "name": "@rex0220/rex0220-plugin-uploader",
+    "version": "1.0.3",
     "description": "A tool to upload and update kintone plugin file.",
     "main": "plugin-uploader.js",
     "bin": {
