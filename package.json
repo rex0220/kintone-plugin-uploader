@@ -1,22 +1,36 @@
 {
-    "name": "@rex0220/rex0220-plugin-uploader",
-    "version": "1.0.3",
-    "description": "A tool to upload and update kintone plugin file.",
-    "main": "plugin-uploader.js",
-    "bin": {
-      "plugin-uploader": "./plugin-uploader.js"
-    },
-    "scripts": {
-      "start": "node plugin-uploader.js"
-    },
-    "author": "rex0220",
-    "license": "MIT",
-    "dependencies": {
-      "axios": "^0.21.1",
-      "dotenv": "^8.2.0",
-      "form-data": "^3.0.0",
-      "kleur": "^4.1.4",
-      "yargs": "^16.2.0"
-    }
-  }
-  
+  "name": "@rex0220/rex0220-plugin-uploader",
+  "version": "1.0.3",
+  "description": "A tool to upload and update kintone plugin file.",
+  "main": "plugin-uploader.js",
+  "bin": {
+    "plugin-uploader": "plugin-uploader.js"
+  },
+  "scripts": {
+    "start": "node plugin-uploader.js"
+  },
+  "author": "rex0220",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "form-data": "^3.0.0",
+    "kleur": "^4.1.4",
+    "yargs": "^16.2.0"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rex0220/kintone-plugin-uploader.git"
+  },
+  "keywords": [
+    "kintone",
+    "plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/rex0220/kintone-plugin-uploader/issues"
+  },
+  "homepage": "https://github.com/rex0220/kintone-plugin-uploader#readme"
+}
