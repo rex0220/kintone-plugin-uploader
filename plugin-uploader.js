@@ -134,7 +134,8 @@ async function uploadPlugin() {
 
         // ヘッダーに基本認証とFormDataのヘッダーを設定します
         const fileUploadHeaders = {
-            'X-Cybozu-Authorization': Buffer.from(`${username}:${password}`).toString('base64')
+            'X-Cybozu-Authorization': Buffer.from(`${username}:${password}`).toString('base64'),
+            ...form.headers
         };
 
         const pluginId = pPluginId || loadPluginID();
