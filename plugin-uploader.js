@@ -12,8 +12,7 @@
 
 const axios = require('axios');
 const fs = require('fs');
-const { FormData } = require('formdata-node');
-const { fileFromPath } = require('formdata-node/file-from-path');
+const FormData = require('form-data');
 const path = require('path');
 const yargs = require('yargs');
 const kleur = require('kleur');
@@ -127,7 +126,7 @@ async function uploadPlugin() {
     try {
         // プラグインファイルを読み込み、FormDataオブジェクトを作成します
         const form = new FormData();
-        form.append('file', await fileFromPath(pluginFilePath));
+        form.append('file', fs.createReadStream(pluginFilePath));
 
         // KintoneのファイルアップロードAPIエンドポイント
         const fileUploadUrl = `https://${subdomain}/k/v1/file.json`;
@@ -135,7 +134,7 @@ async function uploadPlugin() {
         // ヘッダーに基本認証とFormDataのヘッダーを設定します
         const fileUploadHeaders = {
             'X-Cybozu-Authorization': Buffer.from(`${username}:${password}`).toString('base64'),
-            ...form.headers
+            ...form.getHeaders(),
         };
 
         const pluginId = pPluginId || loadPluginID();
